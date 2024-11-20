@@ -4,13 +4,13 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import LoginScreen from '../screens/LoginScreen'
 import HomeScreen from '../screens/HomeScreen'
-import LikedSongScreen from '../screens/LikedSongScreen'
+import SongScreen from '../screens/SongScreen'
 import ProfileScreeen from '../screens/ProfileScreeen'
-import SonfinfoScreen from '../screens/SonfinfoScreen'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Entypo from 'react-native-vector-icons/Entypo'
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import SongInfoScreen from '../screens/SongInfoScreen'
 
 
 const Tab = createBottomTabNavigator();
@@ -83,8 +83,8 @@ const Routes = () => {
             >
                 <Stack.Screen name='Login' component={LoginScreen} />
                 <Stack.Screen name='Main' component={BottomTabs} />
-                <Stack.Screen name='Liked' component={LikedSongScreen} />
-                <Stack.Screen name='Info' component={SonfinfoScreen} />
+                <Stack.Screen name='Songs' component={SongScreen} />
+                <Stack.Screen name='Info' component={SongInfoScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     )
